@@ -2,7 +2,7 @@ import getopt
 import sys
 import requests
 import json
-from github import GitHub
+from githubmetrics import GitHubMetrics
 
 metrics = ("forks","stars","pr", "contrib")
 
@@ -49,7 +49,9 @@ def main():
         usage()
         sys.exit(2)
     org=arg[0]
-    gitHubOrg=GitHub(org)
-    gitHubOrg.findTopRepos(int(number),metric)
+    gitHubOrg=GitHubMetrics(org)
+    repos = gitHubOrg.findTopRepos(int(number),metric)
+    for key, value in repos.items():
+        print(key+'\t'+str(value))
 if __name__ == "__main__":
     main()	
