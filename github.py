@@ -16,7 +16,6 @@ class GitHub:
         if(response.status_code == 200):
             return response.json()
         else:
-            print(response)
             print("The organization '"+self.org+"' could not be found on GitHub.")
             sys.exit(2)
 

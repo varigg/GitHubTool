@@ -28,9 +28,7 @@ def main():
         usage()
         sys.exit(2)
     for o, a in opts:
-        if o == "-o":
-            org = a
-        elif o == "-n":
+        if o == "-n":
             number = a
             if not number.isnumeric():
                 print(number+" is not a number.")
@@ -46,12 +44,11 @@ def main():
                 print("contrib - contribution rate (forks/pr)")
         else:
             assert False, "unhandled option"
-    org=arg[0]
-    #print (json.dumps(getOrgRepos(org)[0], indent=4, sort_keys=True))
-    if(org is ""):
+    if arg==[]:
         print("org is a required parameter")
         usage()
         sys.exit(2)
+    org=arg[0]
     gitHubOrg=GitHub(org)
     gitHubOrg.findTopRepos(int(number),metric)
 if __name__ == "__main__":
