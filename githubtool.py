@@ -1,7 +1,5 @@
 import getopt
 import sys
-import requests
-import json
 from githubmetrics import GitHubMetrics
 
 metrics = ("forks","stars","pr", "contrib")

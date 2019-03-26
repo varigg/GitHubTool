@@ -13,4 +13,4 @@ Options:
 </pre>
 
 Requirements  
-Requires [python3](https://www.python.org/) and [requests](http://docs.python-requests.org/en/master/) intalled. To install the requests libary run <code>python3 -m ensurepip</code> and <code>'pip3 install requests'</code>.
+Requires [python3](https://www.python.org/) and [PyGithub](https://pygithub.readthedocs.io) intalled. To install the requests libary run <code>python3 -m ensurepip</code> and <code>'pip3 install pygithub'</code>.

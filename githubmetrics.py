@@ -1,6 +1,4 @@
 import sys
-import requests
-import re
 from github import Github
 
 class GitHubMetrics:   
